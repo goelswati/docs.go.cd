@@ -95,7 +95,7 @@ GoCD.script { GoCD buildScript ->
             }
         }
 
-        pipeline("docs.gocd.org-PR") {
+        /*pipeline("docs.gocd.org-PR") {
             group = 'gocd-help-docs'
             materials {
                 pluggable {
@@ -109,7 +109,7 @@ GoCD.script { GoCD buildScript ->
             stages {
                 add(buildStage())
             }
-        }
+        }*/
 
         olderReleases.reverse().each { String releaseVersion ->
             pipeline("docs.gocd.org-${releaseVersion}") {
